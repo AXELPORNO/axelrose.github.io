@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f3f4f6;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+}
+main {
+    padding: 2em;
+}
+footer {
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body, p {
+    margin: 0;
+    padding: 0;
+}
+#bienvenida img {
+    display: block; /* Asegura que la imagen no tenga espacio extra por ser inline */
+    width: 20%;
+    height: auto;
+    margin-bottom: 0; /* Elimina cualquier margen por defecto debajo de la imagen */
+}
+#bienvenida {
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 0; /* Elimina el padding inferior si existe */
+}
+#bienvenida p {
+    margin-top: 10px; /* Ajusta según necesidad para reducir espacio entre la imagen y el texto */
+}
+button {
+    margin-top: 20px; /* Espacio opcional sobre el botón */
+}

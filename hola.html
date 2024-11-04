@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desde Septiembre se Siente</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        img#heroImage {
+            width: 50%; /* Ajusta el tamaño según necesites */
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+    </style>
+</head>
+<body>
+    <header style="display:none;">
+        <center><h1>Im Stronger ,Im Smarter, Im better Im better</h1></center>
+    </header>
+    <div id="bienvenida" style="text-align:center; padding-top:20vh;">
+        <img id="heroImage" src="/1.jpg" alt="Heroic Figure">
+        <p>🌹 Tatiana, me perdonas? 🌹<br>Si sientes que no puedes, toca el botón. Sé que te gustará. ❤️💕<br>💌 Te he preparado algo especial, lleno de cariño y recuerdos, ¡espero que lo disfrutes y pueda alegrarte el corazón! 💌</p>
+        <button onclick="iniciarConteo()">Ver Sorpresa</button>
+    </div>
+    <div id="transicion" style="display:none; position:fixed; top:0; left:0; height:100%; width:100%; background: url('/33.jpg') no-repeat center center; background-size: cover; text-align:center; padding-top:20vh;">
+        <p id="cuentaRegresiva" style="font-size: 5em; color: white;"></p> <!-- Elemento para mostrar el conteo -->
+    </div>
+    <main style="display:none;">
+        <!-- Imagen principal (Galería) -->
+        <img id="imagenGaleria" src="1.jpg" alt="Descripción de la imagen" style="width: 100%; max-width: 800px;">
+        
+        <!-- Contenido del sitio -->
+        <p>I'm a homelander and I can do whatever the fuck I want...</p>
+        
+        <!-- Reproductor de audio -->
+        <audio id="miAudio" autoplay muted loop>
+            <source src="music.mp3" type="audio/mpeg">
+            Tu navegador no soporta el audio.
+        </audio>
+    </main>
+    <script>
+        function iniciarConteo() {
+            document.getElementById('bienvenida').style.display = 'none'; // Oculta la pantalla de bienvenida incluyendo la imagen
+            document.getElementById('transicion').style.display = 'block'; // Muestra la pantalla de transición
+            var contador = 3;
+            document.getElementById('cuentaRegresiva').innerHTML = contador; // Muestra el contador inicial
+            var intervalo = setInterval(function() {
+                contador--;
+                document.getElementById('cuentaRegresiva').innerHTML = contador;
+                if (contador === 0) {
+                    clearInterval(intervalo);
+                    mostrarContenido();
+                }
+            }, 1000); // 1000 milisegundos = 1 segundo
+        }
+
+        function mostrarContenido() {
+            document.getElementById('transicion').style.display = 'none'; // Oculta la pantalla de transición
+            document.querySelector('main').style.display = 'block'; // Muestra el contenido principal
+            document.querySelector('header').style.display = 'block'; // Muestra el header
+            var audio = document.getElementById('miAudio');
+            audio.muted = false;
+            audio.play();
+        }
+
+        // Galería de imágenes
+        const imagenes = ["2.jpg", "3.jpg", "4.jpg"];
+        let indice = 0;
+        function cambiarImagen() {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById("imagenGaleria").src = imagenes[indice];
+        }
+        setInterval(cambiarImagen, 3000);
+    </script>
+    <footer>
+        <p>Hecho con ❤️ por El homelander de las apuestas</p>
+    </footer>
+</body>
+</html>
