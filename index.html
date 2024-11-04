@@ -18,7 +18,7 @@
         <center><h1>Im Stronger ,Im Smarter, Im better Im better</h1></center>
     </header>
     <div id="bienvenida" style="text-align:center; padding-top:20vh;">
-        <img id="heroImage" src="1.jpg" alt="Heroic Figure">
+        <img id="heroImage" src="fondo.jpg" alt="Heroic Figure">
         <p>🌹 Tatiana, me perdonas? 🌹<br>Si sientes que no puedes, toca el botón. Sé que te gustará. ❤️💕<br>💌 Te he preparado algo especial, lleno de cariño y recuerdos, ¡espero que lo disfrutes y pueda alegrarte el corazón! 💌</p>
         <button onclick="iniciarConteo()">Ver Sorpresa</button>
     </div>
@@ -42,7 +42,7 @@
         function iniciarConteo() {
             document.getElementById('bienvenida').style.display = 'none'; // Oculta la pantalla de bienvenida incluyendo la imagen
             document.getElementById('transicion').style.display = 'block'; // Muestra la pantalla de transición
-            var contador = 3;
+            var contador = 5;
             document.getElementById('cuentaRegresiva').innerHTML = contador; // Muestra el contador inicial
             var intervalo = setInterval(function() {
                 contador--;
@@ -64,7 +64,7 @@
         }
 
         // Galería de imágenes
-        const imagenes = ["2.jpg", "3.jpg", "4.jpg"];
+        const imagenes = ["1.jpg","2.jpg", "3.jpg", "4.jpg"];
         let indice = 0;
         function cambiarImagen() {
             indice = (indice + 1) % imagenes.length;
@@ -73,7 +73,7 @@
         setInterval(cambiarImagen, 3000);
     </script>
     <footer>
-        <p>Hecho con ❤️ por El homelander de las apuestas</p>
+        <p>Hecho con ❤️ Alex the homelander </p>
     </footer>
 </body>
 </html>
